@@ -1,0 +1,27 @@
+.carousel-item {
+    height: 400px;
+    background-color: gray;
+}
+
+.card-img-top {
+    height: 18rem;
+    width: 18rem;
+    background-color: gray;
+    /*border-radius: 100%;*/
+}
+
+.my-card {
+    max-width: 18rem;
+}
+
+.card-group {
+    justify-content: space-evenly;
+    margin-top: 10%;
+}
+
+.circle {
+    height: 100px;
+    width: 100px;
+    background-color: gray;
+    border-radius: 100%;
+}
