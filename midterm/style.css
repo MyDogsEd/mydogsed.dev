@@ -1,0 +1,10 @@
+.icon-link {
+    text-decoration: none;
+}
+
+/* ChatGPT code: this cheats the position of the terminal icon on the navbar up slightly,
+just to make it look a little better */
+.icon-link i {
+    position: relative;
+    top: -3.5px; /* Adjust this value as needed */
+}
