@@ -16,6 +16,12 @@ just to make it look a little better */
 .navbar {
     padding-left: 10%;
     padding-right: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#navbarToggle {
+    width: fit-content;
 }
 
 /* Make accented text blue */

@@ -10,31 +10,40 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm bg-dark justify-content-between navbar-dark">
-            <a href="#" class="icon-link text-light">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            
+            <a href="#" class="icon-link text-light navbar-brand">
                 <i class="bi bi-terminal"></i>
                 MyDogsEd
             </a>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a href="#" class="nav-link text-white"><b class="accent">/ </b>home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link"><b class="accent">/ </b>works</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link"><b class="accent">/ </b>about-me</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link"><b class="accent">/ </b>contact</a>
-                </li>
-            </ul>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse d-md-flex justify-content-md-end" id="navbarToggle">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-white"><b class="accent">/ </b>home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"><b class="accent">/ </b>works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"><b class="accent">/ </b>about-me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"><b class="accent">/ </b>contact</a>
+                    </li>
+                </ul>
+            </div>
+            
         </nav>
     </header>
 
     <!--Title and profile pic-->
     <main class="bg-dark">
-        <section id="about-me" class="d-flex flex-column flex-md-row align-items-md-center justify-content-md-between">
+        <section id="about-me" class="d-flex flex-column align-items-center flex-md-row justify-content-md-between">
 
             <!--Left about me has title and contact me button-->
             <div id="left-about-me">
@@ -43,7 +52,7 @@
                     <b class="accent">procrastinator</b>
                 </h1>
                 <p class="text-light-emphasis">He procrastinates the assignments then wonders why he does bad on the tests</p>
-                <button id="btn-contact-me" type="button" class="btn btn-outline-primary">Contact me</button>
+                <button id="btn-contact-me" type="button" class="btn btn-outline-primary d-none d-md-inline-block">Contact me</button>
             </div>
 
             <!--Right about me has the image and the 'currently working on'-->
