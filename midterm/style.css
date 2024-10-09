@@ -1,3 +1,7 @@
+:root {
+    --accent-color: #59cdf7;
+}
+
 .icon-link {
     text-decoration: none;
 }
@@ -16,7 +20,7 @@ just to make it look a little better */
 
 /* Make accented text blue */
 .accent {
-    color: #59cdf7; /* Dominant color from profile pic */
+    color: var(--accent-color); /* Dominant color from profile pic */
 }
 
 main {
@@ -40,3 +44,11 @@ main {
     padding: 5px 4px;
     margin-top: 5px;
 }
+
+#btn-contact-me {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+/* for the horizontal rule purlple line thing, use a div with 0px height
+and a boarder, then you can set the width correctly */
