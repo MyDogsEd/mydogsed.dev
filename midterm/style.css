@@ -105,3 +105,16 @@ the `top-quote` element has 100%
     /* boarder done with bootstrap */
 } 
 
+.blueline {
+    height: 0px;
+    width: 50%;
+    border-style: solid;
+    border-color: var(--accent-color);
+    border-width: 1px;
+    margin-top: 1.3rem;
+    margin-left: 1rem;
+}
+
+.section-heading {
+    display: flex;
+}
