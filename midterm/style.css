@@ -31,14 +31,17 @@ main {
 
 
 #right-about-me {
-    min-width: 50%;
+    min-width: 300px; 
+    max-width: 30%;
 }
 
+
 #left-about-me {
-    min-width: 50%;
+    min-width: 300px;
     padding-top: 10%;
     padding-right: 5%;
 }
+
 
 .profile-pic-caption {
     padding: 5px 4px;
@@ -52,3 +55,47 @@ main {
 
 /* for the horizontal rule purlple line thing, use a div with 0px height
 and a boarder, then you can set the width correctly */
+
+/* 
+Quote
+
+The quote's outermost container spans the width of the whole 'about me' section `quote container`
+`quote` is within this outermost container, has a width of 60%, and is centered in `quote container`
+the `top-quote` element has 100%
+*/
+
+#quote-container {
+    --padding-around: 1rem;
+    --margin-around: 1rem;
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: var(--margin-around);
+    
+}
+
+#quote {
+    width: 80%;
+}
+
+#top-quote {
+    width: 100%;
+    margin: 0;
+    padding: var(--padding-around);
+    /* boarder done with bootstrap */
+}
+
+#bottom-quote-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+
+}
+
+#bottom-quote{
+    padding: var(--padding-around)
+    /* boarder done with bootstrap */
+} 
+
