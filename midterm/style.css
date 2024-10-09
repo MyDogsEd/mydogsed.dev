@@ -25,6 +25,23 @@ main {
     padding-top: 100px;
 }
 
-#left-about-me #right-about-me {
-    display: inline-block;
+
+#right-about-me {
+    height: fit-content;
+    width: fit-content;
+}
+
+#left-about-me {
+    width: 60%;
+    padding-top: 10%;
+    padding-right: 5%;
+}
+
+#profile-pic {
+    max-width: 70%;
+}
+
+.profile-pic-caption {
+    padding-top: 0px;
+    padding: 5px 4px;
 }

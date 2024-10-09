@@ -11,7 +11,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-sm bg-dark justify-content-between navbar-dark">
-            <a href="#" class="icon-link text-light text-">
+            <a href="#" class="icon-link text-light">
                 <i class="bi bi-terminal"></i>
                 MyDogsEd
             </a>
@@ -34,7 +34,7 @@
 
     <!--Title and profile pic-->
     <main class="bg-dark">
-        <section id="about-me">
+        <section id="about-me" class="d-lg-flex justify-content-between">
 
             <!--Left about me has title and contact me button-->
             <div id="left-about-me">
@@ -46,7 +46,14 @@
 
             <!--Right about me has the image and the 'currently working on'-->
             <div id="right-about-me">
-                <img src="assets/profile pic.png" alt="profile picture" id="profile-pic">
+
+                <div id="profile-pic-container" class="d-lg-flex justify-content-end">
+                    <img id="profile-pic" src="assets/profile pic.png" alt="profile picture"  class="img-fluid">
+                </div>
+                <p class="profile-pic-caption border border-light text-light">
+                     <b class="accent"><i class="bi bi-square-fill"></i></b> Currently working on <b>CIS 255 Midterm</b>
+                </p>
+
             </div>
         </section>    
     </main>
