@@ -8,3 +8,8 @@ just to make it look a little better */
     position: relative;
     top: -3.5px; /* Adjust this value as needed */
 }
+
+.navbar {
+    padding-left: 10%;
+    padding-right: 10%;
+}
