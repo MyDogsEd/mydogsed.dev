@@ -27,11 +27,11 @@ main {
 
 
 #right-about-me {
-    width: 50%;
+    min-width: 50%;
 }
 
 #left-about-me {
-    width: 60%;
+    min-width: 50%;
     padding-top: 10%;
     padding-right: 5%;
 }
