@@ -27,8 +27,7 @@ main {
 
 
 #right-about-me {
-    height: fit-content;
-    width: fit-content;
+    width: 50%;
 }
 
 #left-about-me {
@@ -37,11 +36,7 @@ main {
     padding-right: 5%;
 }
 
-#profile-pic {
-    max-width: 70%;
-}
-
 .profile-pic-caption {
-    padding-top: 0px;
     padding: 5px 4px;
+    margin-top: 5px;
 }
