@@ -15,6 +15,16 @@ just to make it look a little better */
 }
 
 /* Make accented text blue */
-b {
+.accent {
+    color: #59cdf7; /* Dominant color from profile pic */
+}
 
+main {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 100px;
+}
+
+#left-about-me #right-about-me {
+    display: inline-block;
 }
