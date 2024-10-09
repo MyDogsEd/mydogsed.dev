@@ -118,3 +118,16 @@ the `top-quote` element has 100%
 .section-heading {
     display: flex;
 }
+
+#skills-left {
+    width: 40%;
+}
+
+#skills-left > img {
+    max-width: 80%;
+}
+
+#skills-right .card {
+    margin-bottom: 1rem;
+    border-radius: 0;
+}
