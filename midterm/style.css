@@ -140,3 +140,17 @@ footer {
     padding-left: 10%;
     padding-right: 10%;
 }
+
+p {
+    margin-bottom: 0px;
+    padding-bottom: 5px;;
+}
+
+#contact{
+    padding-bottom: 4rem;
+}
+
+.social-icon{
+    padding-right: 1rem;
+    font-size: 1.5rem;
+}
