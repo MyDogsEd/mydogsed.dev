@@ -54,7 +54,7 @@ main {
     margin-top: 5px;
 }
 
-#btn-contact-me {
+.accent-button {
     color: var(--accent-color);
     border-color: var(--accent-color);
 }
@@ -127,7 +127,14 @@ the `top-quote` element has 100%
     max-width: 80%;
 }
 
-#skills-right .card {
+#skills-right .card, #projects .card {
     margin-bottom: 1rem;
     border-radius: 0;
+}
+
+#projects .col-md {
+    max-width: 100%;
+}
+
+#projects-card-container {
 }
