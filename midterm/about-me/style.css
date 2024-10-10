@@ -1,0 +1,27 @@
+:root {
+    --accent-color: #59cdf7;
+}
+
+/* Make accented text blue */
+.accent {
+    color: var(--accent-color); /* Dominant color from profile pic */
+}
+
+/* Padding for nav, main, and footer */
+.navbar {
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 100px;
+}
+
+footer {
+    padding-left: 10%;
+    padding-right: 10%;
+}
