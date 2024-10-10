@@ -136,5 +136,7 @@ the `top-quote` element has 100%
     max-width: 100%;
 }
 
-#projects-card-container {
+footer {
+    padding-left: 10%;
+    padding-right: 10%;
 }
