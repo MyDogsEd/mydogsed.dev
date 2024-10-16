@@ -1,7 +1,33 @@
+/* CSS Varibale for the accent color (taken from profile pic image) */
 :root {
     --accent-color: #59cdf7;
 }
 
+/* Make accented text blue */
+/* This class can be added to a <b> tag to add the accent color */
+.accent {
+    color: var(--accent-color); /* Dominant color from profile pic */
+}
+
+/* Class to add the accent color to a bootstrap button */
+.accent-button {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+/* Add a little padding at the end of each section */
+section {
+    padding-bottom: 4rem;
+}
+
+/* Remove the default paragraph margin and replace it with padding
+ this was affecting the background in some places */
+p {
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+}
+
+/* Remove the underline from the bootstrap .icon-link class */
 .icon-link {
     text-decoration: none;
 }
@@ -13,6 +39,7 @@ just to make it look a little better */
     top: -3.5px; /* Adjust this value as needed */
 }
 
+/* Padding and spacing for navbar elements */
 .navbar {
     padding-left: 10%;
     padding-right: 10%;
@@ -20,47 +47,31 @@ just to make it look a little better */
     justify-content: space-between;
 }
 
-#navbarToggle {
-    width: fit-content;
-}
-
-/* Make accented text blue */
-.accent {
-    color: var(--accent-color); /* Dominant color from profile pic */
-}
-
+/* Padding for main */
 main {
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 100px;
 }
 
-
-#right-about-me {
+/* CSS so the profile picture and title stack correctly */
+#right-profile {
     min-width: 300px; 
     max-width: 30%;
 }
 
-
-#left-about-me {
+#left-profile {
     min-width: 300px;
     padding-top: 10%;
     padding-right: 5%;
 }
 
-
+/* Make the image caption lay out well
+the boarder is added via bootstrap */
 .profile-pic-caption {
     padding: 5px 4px;
     margin-top: 5px;
 }
-
-.accent-button {
-    color: var(--accent-color);
-    border-color: var(--accent-color);
-}
-
-/* for the horizontal rule purlple line thing, use a div with 0px height
-and a boarder, then you can set the width correctly */
 
 /* 
 Quote
@@ -105,6 +116,7 @@ the `top-quote` element has 100%
     /* boarder done with bootstrap */
 } 
 
+/* The blue line that appears in the section headings */
 .blueline {
     height: 0px;
     width: 50%;
@@ -115,10 +127,12 @@ the `top-quote` element has 100%
     margin-left: 1rem;
 }
 
+/* layout so the section heading lays out correctly */
 .section-heading {
     display: flex;
 }
 
+/* contains the image next to the skills cards */
 #skills-left {
     width: 40%;
 }
@@ -127,29 +141,31 @@ the `top-quote` element has 100%
     max-width: 80%;
 }
 
+/* Make the bootstrap cards in the skills and projects sections 
+have square corners and a margin at the bottom */
 #skills-right .card, #projects .card {
     margin-bottom: 1rem;
     border-radius: 0;
 }
 
-#projects .col-md {
-    max-width: 100%;
+/* Make the card images in the projects section have square corners
+to match the cards themselves */
+#projects .card>img{
+    border-radius: 0px;
 }
 
+/* So the cards don't take up the entire screen on mobile */
+#projects .col-md {
+    max-width: 80%;
+}
+
+/* padding for the footer to match the rest of the page */
 footer {
     padding-left: 10%;
     padding-right: 10%;
 }
 
-p {
-    margin-bottom: 0px;
-    padding-bottom: 5px;;
-}
-
-#contact{
-    padding-bottom: 4rem;
-}
-
+/* social icons in the footer */
 .social-icon{
     padding-right: 1rem;
     font-size: 1.5rem;
