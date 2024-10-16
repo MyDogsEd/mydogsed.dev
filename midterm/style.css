@@ -158,14 +158,14 @@ p {
 /* Media queries for the #paragraph-container to make the width mobile-friendly*/
 
 /* Default (for small screens) is 100% width */
-#paragraph-container {
+.paragraph-container {
     width: 100%;
 }
 
 /* For medium screens and up, the width should be 75% */
 /* Bootstrap's md screen size is 768px */
 @media (min-width: 768px){
-    #paragraph-container {
+    .paragraph-container {
         width: 75%;
     }
 }
@@ -173,7 +173,7 @@ p {
 /* For large screens and up, the width should be 50% */
 /* Bootstrap's lg screen size is 992px */
 @media (min-width: 992px){
-    #paragraph-container {
+    .paragraph-container {
         width: 50%;
     }
 }
