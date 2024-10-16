@@ -5,7 +5,7 @@
 
 /* Make accented text blue */
 .accent {
-    color: var(--accent-color); /* Dominant color from profile pic */
+    color: var(--accent-color); /* Dominant color from profile pic, used throught site*/
 }
 
 /* Padding for nav, main, and footer */
@@ -27,4 +27,27 @@ main {
 footer {
     padding-left: 10%;
     padding-right: 10%;
+}
+
+/* Media queries for the #paragraph-container to make the width mobile-friendly*/
+
+/* Default (for small screens) is 100% width */
+#paragraph-container {
+    width: 100%;
+}
+
+/* For medium screens and up, the width should be 75% */
+/* Bootstrap's md screen size is 768px */
+@media (min-width: 768px){
+    #paragraph-container {
+        width: 75%;
+    }
+}
+
+/* For large screens and up, the width should be 50% */
+/* Bootstrap's lg screen size is 992px */
+@media (min-width: 992px){
+    #paragraph-container {
+        width: 50%;
+    }
 }
