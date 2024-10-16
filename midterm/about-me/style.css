@@ -1,3 +1,4 @@
+/* Accent color variable */
 :root {
     --accent-color: #59cdf7;
 }
@@ -15,12 +16,14 @@
     justify-content: space-between;
 }
 
+/* Padding for main */
 main {
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 100px;
 }
 
+/* Padding for footer*/
 footer {
     padding-left: 10%;
     padding-right: 10%;
