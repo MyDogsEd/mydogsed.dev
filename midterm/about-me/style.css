@@ -51,3 +51,29 @@ footer {
         width: 50%;
     }
 }
+
+/* CSS for the my-fun-facts section */
+.fun-fact {
+    display: inline-block;
+    padding: 5px;
+    border-style: solid;
+    border-width: 1.5px;
+    margin: 5px;
+}
+
+/* CSS and media queries to make the fun-facts section layout right on mobile */
+#my-fun-facts-content {
+    width: 100%;
+}
+
+@media (min-width: 768px){
+    #my-fun-facts-content {
+        width: 75%;
+    }
+}
+
+@media (min-width: 992px){
+    #my-fun-facts-content {
+        width: 50%;
+    }
+}
