@@ -46,103 +46,115 @@
         </nav>
     </header>
 
+    <!-- Main content of the page, not including header or footer -->
     <main class="bg-dark">
+
+        <!-- Page title and subtitle -->
         <h1 class="text-light"><b class="accent">/</b>about-me</h1>
         <p class="text-secondary">Who am I?</p>
-        <div class="">
-            <div id="paragraph-container" class="text-secondary">
-                <p>Hello, I'm James!</p>
-                <p>
-                    I'm a college student at Saginaw Valley State University in Saginaw, Michigan.
-                    I'm currently in the process of getting my bachelor's degree in Computer Science.
-                    I like to work on websites, and on backend development!
-                </p>
 
-                <p>
-                    I started programming in earnest in high school. I had found this repo on github
-                    of a "discord spam-ping bot", or basically a way to flood your friend's phone 
-                    with notifications through a communication app called Discord. However, the code in 
-                    this repo didn't work quite right, and I decided that I would learn programming
-                    in order to annoy my friends. Since then, it's turned into something that I 
-                    really enjoy!
-                </p>
-            </div>
-        </div>
+        <!-- About paragraph. CSS attached for responsiveness -->
+        <section id="paragraph-container" class="py-5 text-secondary">
+            <p>Hello, I'm James!</p>
+            <p>
+                I'm a college student at Saginaw Valley State University in Saginaw, Michigan.
+                I'm currently in the process of getting my bachelor's degree in Computer Science.
+                I like to work on websites, and on backend development!
+            </p>
 
-        <section id="skills" class="text-light py-5">
-            <div class="section-heading pb-2">
-                <h2><b class="accent">#</b>skills</h2>
-            </div>
-            <div id="skills-content" class="d-flex">
-                <div class="row">
-                    <div class="col-sm">
-
-                        <div class="card bg-dark text-light">
-                            <div class="card-header">Languages</div>
-                            <div class="card-body">
-                                <p class="card-text">
-                                    Typescript Lua Python Javascript
-                                </p>
-                            </div>
-                        </div>
-                    </div> <!--close col-->
-
-                    <div class="col-sm">
-                        <div class="card bg-dark text-light">
-                            <div class="card-header">Databases</div>
-                            <div class="card-body">
-                                <p class="card-text">
-                                    SQLite PostreSQL MongoDB
-                                </p>
-                            </div>
-                        </div><!--close col-->
-                    </div>
-                    <div class="col-sm">
-                        <div class="card bg-dark text-light">
-                            <div class="card-header">Other</div>
-                            <div class="card-body">
-                                <p class="card-text">
-                                    HTML CSS EJS SCSS REST Jinja
-                                </p>
-                            </div>
-                        </div>
-                    </div> <!--close col-->
-
-                    <div class="col-sm">
-                        <div class="card bg-dark text-light">
-                            <div class="card-header">Tools</div>
-                            <div class="card-body">
-                                <p class="card-text">
-                                    VSCoder Neovim Linux Figma XFCE Arch Git Font Awesome
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm">
-                        <div class="card bg-dark text-light">
-                            <div class="card-header">Frameworks</div>
-                            <div class="card-body">
-                                <p class="card-text">
-                                    React Vue Disnake Discord.js Flask Express.js
-                                </p>
-                            </div>
-                        </div>
-                    </div> <!--close .col-->
-
-                </div> <!--close .row-->
-            </div>
-
+            <p>
+                I started programming in earnest in high school. I had found this repo on github
+                of a "discord spam-ping bot", or basically a way to flood your friend's phone
+                with notifications through a communication app called Discord. However, the code in
+                this repo didn't work quite right, and I decided that I would learn programming
+                in order to annoy my friends. Since then, it's turned into something that I
+                really enjoy!
+            </p>
         </section>
 
-        <section id="my-fun-facts">
-            <div id="section-heading" class="pb-2 text-white">
-                <h2><b class="accent">#</b>my-fun-facts</h2>
-            </div>
+        <!-- Skills section contains tech and tool cards -->
+        <section id="skills" class="text-light py-5">
+
+            <!-- Section Header -->
+            <h2 class="section-heading pb-2 text-white"><b class="accent">#</b>skills</h2>
+
+            
+            <!-- Contains all of the skills cards in one row -->
+            <div id="skills-content" class="row">
+
+                <div class="col-sm">
+                    <!-- Skill card -->
+                    <div class="card bg-dark text-light">
+                        <div class="card-header">Languages</div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Typescript Lua Python Javascript
+                            </p>
+                        </div>
+                    </div>
+                </div> <!--close col-->
+
+                <div class="col-sm">
+                    <div class="card bg-dark text-light">
+                        <div class="card-header">Databases</div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                SQLite PostreSQL MongoDB
+                            </p>
+                        </div>
+                    </div><!--close col-->
+                </div>
+
+                <div class="col-sm">
+                    <div class="card bg-dark text-light">
+                        <div class="card-header">Other</div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                HTML CSS EJS SCSS REST Jinja
+                            </p>
+                        </div>
+                    </div>
+                </div> <!--close col-->
+
+                <div class="col-sm">
+                    <div class="card bg-dark text-light">
+                        <div class="card-header">Tools</div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                VSCoder Neovim Linux Figma XFCE Arch Git Font Awesome
+                            </p>
+                        </div>
+                    </div>
+                </div> <!-- close col -->
+
+                <div class="col-sm">
+
+                    <div class="card bg-dark text-light">
+                        <div class="card-header">Frameworks</div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                React Vue Disnake Discord.js Flask Express.js
+                            </p>
+                        </div>
+                    </div>
+                </div> <!--close .col-->
+
+            </div> <!--close .row-->
+        </section>
+
+        <!-- Fun facts section -->
+        <section id="my-fun-facts" class="py-5">
+            <!-- section heading -->
+            <h2 class="section-heading pb-2 text-white"><b class="accent">#</b>my-fun-facts</h2>
+
+            <!-- Each fun fact is its own div with a boarder, all set to display: inline-block -->
+            <!-- The container has CSS linked to make it responsive on mobile -->
             <div id="my-fun-facts-content" class="text-secondary">
                 <div class="fun-fact">I like winter more than summer</div>
                 <div class="fun-fact">I often bike with my rfriends</div>
                 <div class="fun-fact">I like <b class="text-white">pizza</b> and <b class="text-white">pasta</b></div>
-                <div class="fun-fact">I was in <b class="text-white">Egypt</b>, <b class="text-white">Poland</b>, and <b class="text-white">Turkey</b></div>
+                <div class="fun-fact">I was in <b class="text-white">Egypt</b>, <b class="text-white">Poland</b>, and <b
+                        class="text-white">Turkey</b></div>
                 <div class="fun-fact">My favorite movie is <b class="text-white">The Green Mile</b></div>
                 <div class="fun-fact">I am still in school</div>
                 <div class="fun-fact">I don't have any siblings</div>
@@ -150,6 +162,7 @@
         </section>
     </main>
 
+    <!-- Footer, same as found on main page -->
     <footer class="bg-dark border-top pt-5 pb-5">
         <div id="footer-container-top" class="d-flex justify-content-between">
             <div id="footer-left w-75">
