@@ -1,0 +1,28 @@
+#calc-container{
+    width: 80%;
+}
+
+
+@media (min-width: 650px){
+    #calc-container{
+        width: 70%;
+    }
+}
+
+@media (min-width: 800px){
+    #calc-container{
+        width: 60%;
+    }
+}
+
+@media (min-width: 950px){
+    #calc-container{
+        width: 45%;
+    }     
+}
+
+@media (min-width: 1100px){
+    #calc-container{
+        width: 30%;
+    }     
+}
