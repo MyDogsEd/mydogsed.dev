@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-dark">
 
 <head>
     <meta charset="UTF-8">
@@ -11,33 +11,36 @@
 </head>
 
 <body>
-    <div id="calc-container">
-        <div id="answer-container"></div>
-        <div id="history-button"></div>
-        <div id="buttons-container">
-            <div class="row">
-                <button type="button" class="col btn btn-secondary">1</button>
-                <button type="button" class="col btn btn-secondary">2</button>
-                <button type="button" class="col btn btn-secondary">3</button>
-                <button type="button" class="col btn btn-secondary">ce</button>
+    <div id="calc-container" class="bg-dark">
+        
+        <div id="buttons-container" class="m-3 ">
+            <div id="top-container" class="row">
+                <div id="answer-container" class="col-9 p-0 mt-1 mb-1 ps-2 text-light bg-opacity-1 bg-primary-subtle">answer</div>
+                <button id="historyButton" type="button" class="col btn btn-primary m-1">History</button>
             </div>
             <div class="row">
-                <button type="button" class="col btn btn-secondary">4</button>
-                <button type="button" class="col btn btn-secondary">5</button>
-                <button type="button" class="col btn btn-secondary">6</button>
-                <button type="button" class="col btn btn-secondary">-</button>
+                <button type="button" class="col btn btn-secondary m-1">1</button>
+                <button type="button" class="col btn btn-secondary m-1">2</button>
+                <button type="button" class="col btn btn-secondary m-1">3</button>
+                <button type="button" class="col btn btn-secondary m-1">ce</button>
             </div>
             <div class="row">
-                <button type="button" class="col btn btn-secondary">7</button>
-                <button type="button" class="col btn btn-secondary">8</button>
-                <button type="button" class="col btn btn-secondary">9</button>
-                <button type="button" class="col btn btn-secondary">/</button>
+                <button type="button" class="col btn btn-secondary m-1">4</button>
+                <button type="button" class="col btn btn-secondary m-1">5</button>
+                <button type="button" class="col btn btn-secondary m-1">6</button>
+                <button type="button" class="col btn btn-secondary m-1">-</button>
             </div>
             <div class="row">
-                <button type="button" class="col btn btn-secondary">*</button>
-                <button type="button" class="col btn btn-secondary">0</button>
-                <button type="button" class="col btn btn-secondary">+</button>
-                <button type="button" class="col btn btn-secondary">=</button>
+                <button type="button" class="col btn btn-secondary m-1">7</button>
+                <button type="button" class="col btn btn-secondary m-1">8</button>
+                <button type="button" class="col btn btn-secondary m-1">9</button>
+                <button type="button" class="col btn btn-secondary m-1">/</button>
+            </div>
+            <div class="row">
+                <button type="button" class="col btn btn-secondary m-1">*</button>
+                <button type="button" class="col btn btn-secondary m-1">0</button>
+                <button type="button" class="col btn btn-secondary m-1">+</button>
+                <button type="button" class="col btn btn-secondary m-1">=</button>
             </div>
         </div>
     </div>
