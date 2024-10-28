@@ -108,8 +108,11 @@ function tests() {
 }
 
 function updateScores(){
-    
+    document.getElementById("winsCount").innerText = Scores[GAMES.COMPUTER_LOSE]
+    document.getElementById("lossesCount").innerText = Scores[GAMES.COMPUTER_WIN]
+    document.getElementById("tiesCount").innerText = Scores[GAMES.TIE]
 }
 
+updateScores();
 main();
 //tests()
