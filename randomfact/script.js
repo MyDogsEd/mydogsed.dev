@@ -1,6 +1,6 @@
 const URL = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
 
-getCocktail()
+
 
 async function getCocktail() {
 
@@ -11,10 +11,10 @@ async function getCocktail() {
         ingredients: []
     }
 
-    fetch(URL).then((data) => data.json().then((jsonData) => {
+    return fetch(URL).then((data) => data.json().then((jsonData) => {
         var drink = jsonData.drinks[0];
-        console.log("json recieved")
-        console.log(drink);
+        //console.log("json recieved")
+        //console.log(drink);
 
         // get the name, img, and instructions
         cocktail.name = drink.strDrink
@@ -36,22 +36,34 @@ async function getCocktail() {
             i++
         }
 
-        console.log("measures:")
-        console.log(measures)
+        //console.log("measures:")
+        //console.log(measures)
 
         // put the measures in front of the ingreidents
         for (i = 0; i < measures.length; i++){
-            cocktail.ingredients[i] = measures[i] + cocktail.ingredients[i];
+            cocktail.ingredients[i] = measures[i] + " " + cocktail.ingredients[i];
         }
 
-        console.log("returned value:")
-        console.log(cocktail)
+        //console.log("returned value:")
+        //console.log(cocktail)
         return cocktail;
     }))
 }
 
 async function buttonClick() {
-    var cocktail = await getCocktail();
+    getCocktail().then((cocktail) => {
+        $("#cocktailIngredients").text("")
+
+        $("#cocktailImg").attr("src", cocktail.img)
+        $("#cocktailTitle").text(cocktail.name)
+        $("#cocktailText").text(cocktail.instructions)
+        for(var i = 0; i < cocktail.ingredients.length; i++){
+            $("#cocktailIngredients").append("<li>" + cocktail.ingredients[i] + "</li>")
+        }
+    })
+
 
 
 }
+
+$("#cocktailButton").on("click", buttonClick)
