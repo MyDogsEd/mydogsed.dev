@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stoplight Controller</title>
+    <!-- Include jQuery library for DOM manipulation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        /* Container styles */
+        .container {
+            display: flex;
+            flex-wrap: wrap; /* Allows stoplight units to wrap onto the next line */
+            gap: 20px; /* Spacing between each stoplight unit */
+            padding: 20px; /* Padding inside the container */
+        }
+
+        /* Individual stoplight unit style */
+        .stoplight-unit {
+            border: 1px solid #ccc; /* Light border around the stoplight unit */
+            padding: 15px; /* Padding inside each unit */
+            border-radius: 8px; /* Rounded corners for aesthetic effect */
+            text-align: center; /* Center-aligns content */
+            background: #f5f5f5; /* Light grey background for each unit */
+        }
+
+        /* Stoplight container box (background) style */
+        .stoplight {
+            width: 60px;
+            height: 140px;
+            background: #333; /* Dark background for the stoplight */
+            border-radius: 10px; /* Rounded edges */
+            padding: 10px;
+            margin: 10px auto; /* Centers the stoplight within its container */
+        }
+
+        /* Light circle styles (default state: inactive) */
+        .light {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%; /* Makes the lights circular */
+            background: #000; /* Default black color when inactive */
+            margin: 5px auto; /* Centers the light circles horizontally */
+            opacity: 0.3; /* Low opacity when inactive */
+        }
+
+        /* Active red light style */
+        .light.red.active {
+            background: #ff0000; /* Red when active */
+            opacity: 1; /* Full opacity when active */
+            box-shadow: 0 0 20px #ff0000; /* Glow effect for active red light */
+        }
+
+        /* Active green light style */
+        .light.green.active {
+            background: #00ff00; /* Green when active */
+            opacity: 1; /* Full opacity when active */
+            box-shadow: 0 0 20px #00ff00; /* Glow effect for active green light */
+        }
+
+        /* Toggle switch styles */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc; /* Default background color */
+            transition: .4s;
+            border-radius: 34px; /* Rounded edges of the slider */
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white; /* White knob */
+            transition: .4s;
+            border-radius: 50%; /* Circular knob */
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3; /* Blue when the switch is toggled on */
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px); /* Moves the knob when the switch is on */
+        }
+    </style>
+</head>
+<body>
+    <!-- Container for stoplight units -->
+    <div class="container" id="stoplightContainer"></div>
+
+    <script>
+        // Define the Stoplight class to represent individual stoplight units
+        class Stoplight {
+
+            // Enum for the states of the stoplight
+            static STATES = {
+                STOPPED: 0,
+                RUNNING: 1
+            }
+
+            // Keep track of the ID for the stoplight
+            id = null;
+
+            
+            // Create a new stoplight, append it to the page
+            constructor(id) {
+                this.id = id
+                this.createStoplightElement();
+
+            }
+
+            // The div of the stoplight
+            stoplightDiv() {
+                return $(`
+                    <div class="stoplight">
+                        <div class="light red" id="red${this.id}"></div>
+                        <div class="light" id="yellow${this.id}"></div>
+                        <div class="light green" id="green${this.id}"></div>
+                    </div>
+                `);
+            }
+
+            // the label for the switch
+            switchLabel() {
+                return $(`
+                    <label class="switch">
+                        <input type="checkbox" id="toggle${this.id}">
+                        <span class="slider"></span>
+                    </label>
+                `);
+            }
+
+            // The label containing the text for the stoplight
+            textLabel() { 
+                return $(`
+                    <h3>Stoplight ${this.id}</h3>
+                `)
+            }
+
+            // Method to create the HTML structure for a stoplight unit
+            createStoplightElement() {
+                // Create a stoplight unit container
+                var container = $(`<div class="stoplight-unit"></div>`)
+                
+                // Append the text label
+                container.append(this.textLabel())
+
+                // Append the switch
+                container.append(this.switchLabel())
+                
+                // Append the stoplight Div
+                container.append(this.stoplightDiv())
+
+                // Append this to the container
+                $(`.container`).append(container)
+
+                $(`#toggle${this.id}`).on("click", () => this.toggleStoplight())
+
+                this.state = this.loadState()
+                if (this.state == Stoplight.STATES.RUNNING){
+                    $(`#toggle${this.id}`).click()
+                }
+
+                // Attach an event listener to the toggle switch to start/stop the stoplight
+                
+
+                
+            }
+
+            // Method to start the stoplight's light-changing cycle
+            start() {
+                // Mark the stoplight as running
+                this.state = Stoplight.STATES.RUNNING;
+
+                // Save the state to localStorage
+                localStorage.setItem(this.id, this.state)
+
+                this.toggleLight()       
+            }
+
+            // Method to stop the stoplight's light-changing cycle
+            stop() {
+                // Mark the stoplight as stopped
+                this.state = Stoplight.STATES.STOPPED;
+
+                // Save the state to localStorage
+                localStorage.setItem(this.id, this.state)
+
+                // Turn off all lights
+                this.clearLights()
+            }
+
+            // Toggle the stoplight between running and stopped states
+            toggleStoplight() {
+                // If stopped, start the stoplight
+                if (this.state === Stoplight.STATES.STOPPED){
+                    this.start()
+                    return;
+                }
+                // If running, stop the stoplight
+                this.stop()
+            }
+
+            // Method to change the color of the stoplight (red <-> green)
+            toggleLight() {
+                if (this.state === Stoplight.STATES.STOPPED) return;
+                // Figure out what light is active
+                if ($(`#red${this.id}`).hasClass("active")){
+                    this.clearLights();
+                    $(`#green${this.id}`).addClass("active")
+                } else {
+                    this.clearLights();
+                    $(`#red${this.id}`).addClass("active")
+                }
+
+                setTimeout(() => this.toggleLight(), 5000)
+
+            }
+
+            // Method to turn off all the lights (reset state)
+            clearLights() {
+                // Turn off red light
+                $(`#red${this.id}`).removeClass("active")
+
+                // Turn off green light
+                $(`#green${this.id}`).removeClass("active")
+                 
+            }
+
+            // Method to load the previously saved state from localStorage
+            loadState() {
+                var state = localStorage.getItem(this.id)
+                if (state === null) return Stoplight.STATES.STOPPED
+                else return state;
+            }
+        }
+
+        // Create 6 stoplights when the page loads
+        $(document).ready(() => {
+            for (let i = 1; i <= 6; i++) {
+                new Stoplight(i); // Create and initialize stoplight instances
+            }
+        });
+    </script>
+</body>
+</html>
