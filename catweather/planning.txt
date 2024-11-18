@@ -4,7 +4,7 @@ Inspired by the HTTP Status Code Cats
 Using the Weather Codes section of the open-metero API
 
 
-Codes:
+backup: 
 0, Clear Sky; X 
 1, Mainly Clear;
 2, Partly Cloudy;
@@ -30,6 +30,62 @@ Codes:
 82, Violent Rain Showers; X
 85, Slight Snow Showers; X
 86, Heavy Snow Showers; X
-95, Slight Thunderstorm;
+95, Slight Thunderstorm; X
 96, Thunderstorm with Slight Hail;
 99, Thunderstorm with Heavy Hail;
+
+Violent Rain Showers.webp
+Snow Grains.jpg
+Slight Thunderstorm.jpg
+Slight Snowfall.webp
+Slight Snow Showers.webp
+Slight Rain Showers.webp
+Partly Cloudy.jpg
+Overcast.webp
+Moderate Snowfall.webp
+Moderate Rain.jpg
+Moderate Rain Showersjpg
+Mainly Clear.jpg
+Light Rain.jpg
+Heavy Snowfall.jpg
+Heavy Snow Showers.jpg
+Heavy Rain.webp
+Freezing Rain.gif
+Freezing Fog.gif
+Fog.jpg
+Drizzle.jpg
+Clear Sky.jpg
+404.jpg
+
+
+{
+  "0": "./assets/Clear Sky.jpg",
+  "1": "./assets/Mainly Clear.jpg",
+  "2": "./assets/Partly Cloudy.jpg",
+  "3": "./assets/Overcast.webp",
+  "45": "./assets/Fog.jpg",
+  "48": "./assets/Freezing Fog.gif",
+  "51": "./assets/Drizzle.jpg",
+  "53": "./assets/Drizzle.jpg",
+  "55": "./assets/Drizzle.jpg",
+  "56": "./assets/Freezing Rain.gif",
+  "57": "./assets/Freezing Rain.gif",
+  "61": "./assets/Light Rain.jpg",
+  "63": "./assets/Moderate Rain.jpg",
+  "65": "./assets/Heavy Rain.webp",
+  "66": "./assets/Freezing Rain.gif",
+  "67": "./assets/Freezing Rain.gif",
+  "71": "./assets/Slight Snowfall.webp",
+  "73": "./assets/Moderate Snowfall.webp",
+  "75": "./assets/Heavy Snowfall.jpg",
+  "77": "./assets/Snow Grains.jpg",
+  "80": "./assets/Slight Rain Showers.webp",
+  "81": "./assets/Moderate Rain Showersjpg",
+  "82": "./assets/Violent Rain Showers.webp",
+  "85": "./assets/Slight Snow Showers.webp",
+  "86": "./assets/Heavy Snow Showers.jpg",
+  "95": "./assets/Slight Thunderstorm.jpg",
+  "96": "./assets/Freezing Rain.gif",
+  "99": "./assets/Freezing Rain.gif",
+  "404": "./assets/404.jpg"
+}
