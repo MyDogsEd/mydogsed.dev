@@ -1,0 +1,35 @@
+Weather Cats -- The Weather, but in Cats!
+Inspired by the HTTP Status Code Cats
+
+Using the Weather Codes section of the open-metero API
+
+
+Codes:
+0, Clear Sky; X 
+1, Mainly Clear;
+2, Partly Cloudy;
+3, Overcast;
+45, Fog; X
+48, Freezing Fog;
+51, Light Drizzle;
+53, Moderate Drizzle;
+55, Dense Drizzle;
+56, Light Freezing Drizzle;
+57, Dense Freezing Drizzle;
+61, Light Rain; X
+63, Moderate Rain; X
+65, Heavy Rain; X
+66, Light Freezing Rain;
+67, Heavy Freezing Rain;
+71, Slight Snowfall; X
+73, Moderate Snowfall; X
+75, Heavy Snowfall; X
+77, Snow Grains; X
+80, Slight Rain Showers; X
+81, Moderate Rain Showers; X
+82, Violent Rain Showers; X
+85, Slight Snow Showers; X
+86, Heavy Snow Showers; X
+95, Slight Thunderstorm;
+96, Thunderstorm with Slight Hail;
+99, Thunderstorm with Heavy Hail;
