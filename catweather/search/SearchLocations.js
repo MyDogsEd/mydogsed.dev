@@ -30,7 +30,7 @@ fetch(CITIES_URL + query)
             $("#resultsContainer").append(
                 cityCard(
                     `${element.name}, ${element.admin1}`, 
-                    weatherLink(element.latitude, element.longitude, element.timezone, element.id), 
+                    weatherLink(element.id), 
                     element.country_code.toLowerCase()
                 )
             )
@@ -38,8 +38,8 @@ fetch(CITIES_URL + query)
             
     })
 
-function weatherLink(lat, long, timezone, loc_id){
-    return `../?lat=${lat}&long=${long}&timezone=${timezone}&loc_id=${loc_id}`
+function weatherLink(loc_id){
+    return `../?loc_id=${loc_id}`
 }
 
 function cityCard(text, link = "", ccode) {
