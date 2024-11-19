@@ -1,7 +1,7 @@
 async function loadWeather() {
     // Get latitude and longitude from query string
     const urlParams = new URLSearchParams(window.location.search);
-    const loc_id = urlParams.get("loc_id")
+    var loc_id = urlParams.get("loc_id")
 
     // If there is no latitude query string, do the default
     if (!loc_id){
