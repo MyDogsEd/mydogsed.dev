@@ -10,7 +10,7 @@
 <body class="">
 
   <nav class="navbar navbar-expand-sm bg-body-tertiary">
-    <div class="container-fluid">
+    <div class="container-md">
       <!-- project title -->
       <a class="navbar-brand" href="#">Cat Weather</a>
 
@@ -34,7 +34,25 @@
     </div>
   </nav>
 
-  <main class="ms-5 mt-5">
+  <main class="container-md mt-5">
+    <div id="weatherInfoContainer" class="container d-flex"> 
+      <img id="catWeatherImage" src="https://placehold.co/600x400" alt="Cat weather picture"height="400">
+      
+      <div id="leftWeatherPanel" class="container-fluid mt-5">
+        <div class="card">
+          <div id="locationCardBody" class="card-body">
+            Current Weather for
+          </div>
+        </div>
+        <div class="d-flex align-items-center">
+          <h1 id="catWeatherPun">This is the weather discriptor</h1>
+          <div class="ml-1"></div>
+          <h4 class="text-body-secondary" id="realWeatherCondition"></h4>
+        </div>
+        <h3 id="temperatureDescriptor"></h3>
+      </div>
+    </div>
+    
     <div id="temperatureContainer"></div>
   </main>
 
