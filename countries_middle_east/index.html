@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Middle East Country Quiz</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      display: flex;
+      gap: 1rem;
+    }
+
+    #map {
+      width: 70vw;
+      border: 1px solid #ccc;
+    }
+
+    path {
+      fill: #e0e0e0;
+      stroke: #555;
+      stroke-width: 0.5;
+      transition: fill 0.3s;
+      fill: inherit;
+    }
+
+    path.highlight {
+      fill: orange !important;
+    }
+
+    path.correct {
+      fill: #4caf50 !important;
+    }
+
+    path.wrong {
+      fill: #e53935 !important;
+    }
+  </style>
+<body>
+
+<div id="map-container">
+  <!-- SVG will be injected here -->
+</div>
+
+<div>
+  <h2 id="prompt">Type the country name:</h2>
+  <input id="answer" autocomplete="off" />
+  <p id="feedback"></p>
+</div>
+
+
+
+<script src="game.js" defer></script>
+
+</body>
+</html>
