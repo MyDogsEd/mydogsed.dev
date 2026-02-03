@@ -1,22 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>mydogsed.dev -- Personal Website</title>
-  <meta name="description" content="Personal website of MyDogsEd.">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Country Guessing Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #111;
+      color: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    a {
+      display: block;
+      margin: 0.5rem 0;
+      padding: 0.75rem 1.25rem;
+      text-decoration: none;
+      color: #111;
+      background: #eee;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: transform 0.1s, background 0.1s;
+    }
+
+    a:hover {
+      background: #ddd;
+      transform: scale(1.03);
+    }
+  </style>
 </head>
 <body>
-  <main>
-    <h1>mydogsed.dev</h1>
-    <p>
-      This is my personal website. It is used for small experiments, notes, and
-      project pages.
-    </p>
-    <p>
-      Content will be added over time.
-    </p>
-  </main>
+  <div class="container">
+    <h1>Country Guessing Game</h1>
+    <a href="/countries_europe">Europe</a>
+    <a href="/countries_middle_east">Middle East</a>
+  </div>
 </body>
 </html>
