@@ -76,24 +76,22 @@ fetch('asia.svg')
 // -----------------------
 // Class helper functions
 // -----------------------
-
-// Add or remove a class on a path or all children of a group
+// Add or remove a class on a shape or all children of a group
 function updateClass(el, className, action = "add") {
   if (!el) return;
   const method = action === "add" ? "add" : "remove";
 
-  if (el.tagName.toLowerCase() === "path") {
+  const shapes = el.matches?.("path, circle")
+    ? [el]
+    : el.querySelectorAll?.("path, circle");
+
+  if (shapes && shapes.length) {
+    shapes.forEach(s => s.classList[method](className));
+  } else {
     el.classList[method](className);
-  } else if (el.querySelectorAll) {
-    const children = el.querySelectorAll("path");
-    if (children.length > 0) {
-      children.forEach(p => p.classList[method](className));
-    } else {
-      // fallback in case the group has no paths
-      el.classList[method](className);
-    }
   }
 }
+
 
 // -----------------------
 // Game logic

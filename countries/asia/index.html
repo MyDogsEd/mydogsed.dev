@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Asia Country Quiz</title>
@@ -15,41 +16,48 @@
       border: 1px solid #ccc;
     }
 
-    path {
+    /* Base styles for both paths and circles */
+    path,
+    circle {
       fill: #e0e0e0;
       stroke: #555;
       stroke-width: 0.5;
       transition: fill 0.3s;
-      fill: inherit;
     }
 
-    path.highlight {
+    /* State styles */
+    path.highlight,
+    circle.highlight {
       fill: orange !important;
     }
 
-    path.correct {
+    path.correct,
+    circle.correct {
       fill: #4caf50 !important;
     }
 
-    path.wrong {
+    path.wrong,
+    circle.wrong {
       fill: #e53935 !important;
     }
   </style>
+
 <body>
 
-<div id="map-container">
-  <!-- SVG will be injected here -->
-</div>
+  <div id="map-container">
+    <!-- SVG will be injected here -->
+  </div>
 
-<div>
-  <h2 id="prompt">Type the country name:</h2>
-  <input id="answer" autocomplete="off" />
-  <p id="feedback"></p>
-</div>
+  <div>
+    <h2 id="prompt">Type the country name:</h2>
+    <input id="answer" autocomplete="off" />
+    <p id="feedback"></p>
+  </div>
 
 
 
-<script src="game.js" defer></script>
+  <script src="game.js" defer></script>
 
 </body>
+
 </html>
