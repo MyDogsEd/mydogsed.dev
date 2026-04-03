@@ -1,0 +1,13 @@
+<article class="blog-post-shell">
+    <p class="eyebrow"><a class="blog-back-link" href="{{ blog_index_href }}"><span class="accent">/</span> back to blog</a></p>
+    <header class="blog-post-header">
+        <p class="blog-meta">{{ post_date }}</p>
+        <h1>{{ post_title }}</h1>
+        <p class="blog-summary">{{ post_summary }}</p>
+        {{ tags_markup }}
+    </header>
+
+    <section class="blog-post-body">
+        {{ post_body }}
+    </section>
+</article>
