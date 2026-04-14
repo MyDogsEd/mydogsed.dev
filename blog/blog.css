@@ -180,7 +180,8 @@
 .blog-post-body figure {
     margin-left: 0;
     margin-right: 0;
-    padding: 1rem;
+    /*padding: 1rem;*/
+    padding-bottom: 1rem;
     border-radius: 1.35rem;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
