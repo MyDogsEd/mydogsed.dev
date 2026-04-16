@@ -1,14 +1,16 @@
 :root {
-    --bg: #0d1117;
-    --bg-soft: #131b26;
-    --panel: rgba(19, 27, 38, 0.84);
-    --panel-strong: #151f2c;
-    --line: rgba(89, 205, 247, 0.34);
-    --text: #f3f7fb;
-    --muted: #9caec3;
-    --accent: #59cdf7;
-    --accent-deep: #1f7bb3;
-    --shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+    --bg: #071227;
+    --bg-soft: #0b1a36;
+    --panel: rgba(10, 24, 49, 0.84);
+    --panel-strong: #10244d;
+    --line: rgba(90, 121, 201, 0.34);
+    --text: #f2f6ff;
+    --muted: #9cacd0;
+    --accent: #6f91ea;
+    --accent-deep: #102c6e;
+    --accent-bright: #9cb4ff;
+    --accent-soft: rgba(111, 145, 234, 0.14);
+    --shadow: 0 30px 70px rgba(2, 8, 22, 0.48);
 }
 
 html {
@@ -19,9 +21,9 @@ body {
     margin: 0;
     color: var(--text);
     background:
-        radial-gradient(circle at top left, rgba(89, 205, 247, 0.18), transparent 32%),
-        radial-gradient(circle at 85% 12%, rgba(34, 139, 230, 0.18), transparent 22%),
-        linear-gradient(180deg, #0a0f14 0%, var(--bg) 45%, #0f1620 100%);
+        radial-gradient(circle at top left, rgba(111, 145, 234, 0.2), transparent 32%),
+        radial-gradient(circle at 85% 12%, rgba(16, 44, 110, 0.28), transparent 22%),
+        linear-gradient(180deg, #040b17 0%, var(--bg) 45%, #0b1730 100%);
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     /* Top padding for nav */
     padding-top: 1.5rem;
@@ -64,7 +66,7 @@ main,
 
 .navbar {
     padding: 1rem 1.4rem;
-    background: rgba(13, 17, 23, 0.78);
+    background: rgba(7, 18, 39, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 1.25rem;
     backdrop-filter: blur(14px);
@@ -156,16 +158,16 @@ main {
 }
 
 .accent-button {
-    background: linear-gradient(135deg, var(--accent), #8fe7ff);
-    color: #081018;
+    background: linear-gradient(135deg, var(--accent-deep), var(--accent-bright));
+    color: #eef4ff;
     border: none;
-    box-shadow: 0 18px 30px rgba(89, 205, 247, 0.24);
+    box-shadow: 0 18px 30px rgba(16, 44, 110, 0.34);
 }
 
 .accent-button:hover,
 .accent-button:focus {
-    color: #081018;
-    background: linear-gradient(135deg, #8fe7ff, var(--accent));
+    color: #eef4ff;
+    background: linear-gradient(135deg, var(--accent), var(--accent-bright));
 }
 
 .ghost-button {
@@ -178,7 +180,7 @@ main {
 .ghost-button:focus {
     color: var(--text);
     border-color: var(--accent);
-    background: rgba(89, 205, 247, 0.08);
+    background: var(--accent-soft);
 }
 
 .status-strip {
@@ -197,7 +199,7 @@ main {
     height: 0.75rem;
     border-radius: 50%;
     background: var(--accent);
-    box-shadow: 0 0 0 0 rgba(89, 205, 247, 0.5);
+    box-shadow: 0 0 0 0 rgba(111, 145, 234, 0.5);
     animation: pulse 2.4s infinite;
 }
 
@@ -226,6 +228,11 @@ main {
     padding: 1rem;
     border-radius: 2rem;
     transform: rotate(1.5deg);
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(160deg, rgba(156, 180, 255, 0.18), transparent 42%),
+        linear-gradient(215deg, rgba(16, 44, 110, 0.46), rgba(7, 18, 39, 0.85));
 }
 
 .profile-frame img {
@@ -234,6 +241,9 @@ main {
     border-radius: 1.35rem;
     aspect-ratio: 1 / 1;
     object-fit: cover;
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(156, 180, 255, 0.2);
 }
 
 .terminal-card {
@@ -271,7 +281,7 @@ main {
     inset: auto -10% -40% auto;
     width: 280px;
     height: 280px;
-    background: radial-gradient(circle, rgba(89, 205, 247, 0.2), transparent 65%);
+    background: radial-gradient(circle, rgba(111, 145, 234, 0.24), transparent 65%);
 }
 
 .quote-card h2 {
@@ -350,7 +360,7 @@ main {
 
 .highlight-card {
     background:
-        linear-gradient(180deg, rgba(89, 205, 247, 0.12), transparent),
+        linear-gradient(180deg, rgba(111, 145, 234, 0.14), transparent),
         var(--panel);
 }
 
@@ -371,13 +381,13 @@ main {
 
 .project-art-code {
     background:
-        linear-gradient(135deg, rgba(89, 205, 247, 0.2), rgba(31, 123, 179, 0.4)),
+        linear-gradient(135deg, rgba(111, 145, 234, 0.24), rgba(16, 44, 110, 0.44)),
         linear-gradient(45deg, rgba(255, 255, 255, 0.06), transparent);
 }
 
 .project-art-network {
     background:
-        linear-gradient(135deg, rgba(31, 123, 179, 0.35), rgba(89, 205, 247, 0.14)),
+        linear-gradient(135deg, rgba(16, 44, 110, 0.4), rgba(111, 145, 234, 0.16)),
         linear-gradient(45deg, rgba(255, 255, 255, 0.06), transparent);
 }
 
@@ -410,7 +420,7 @@ main {
     height: 0.9rem;
     border-radius: 50%;
     background: var(--accent);
-    box-shadow: 0 0 0 6px rgba(89, 205, 247, 0.12);
+    box-shadow: 0 0 0 6px rgba(111, 145, 234, 0.12);
 }
 
 .timeline-card {
@@ -487,7 +497,7 @@ main {
 .contact-links a:hover,
 .contact-links a:focus {
     transform: translateY(-2px);
-    background: rgba(89, 205, 247, 0.09);
+    background: var(--accent-soft);
     border-color: var(--line);
 }
 
@@ -506,13 +516,13 @@ main {
 
 @keyframes pulse {
     0% {
-        box-shadow: 0 0 0 0 rgba(89, 205, 247, 0.45);
+        box-shadow: 0 0 0 0 rgba(111, 145, 234, 0.45);
     }
     70% {
-        box-shadow: 0 0 0 12px rgba(89, 205, 247, 0);
+        box-shadow: 0 0 0 12px rgba(111, 145, 234, 0);
     }
     100% {
-        box-shadow: 0 0 0 0 rgba(89, 205, 247, 0);
+        box-shadow: 0 0 0 0 rgba(111, 145, 234, 0);
     }
 }
 
