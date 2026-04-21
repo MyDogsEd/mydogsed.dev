@@ -11,9 +11,9 @@ published: true
 
 First off, welcome to my blog!
 
-This is kind of an unorthodox setup. I have a folder, `/blog-content` with a bunch of Markdown source files in it, which you can [see for yourself](/blog-content/my-custom-blog-build-system.md) if you really want to. 
+This is kind of an unorthodox setup. I have a folder, `/blog-content` with a bunch of Markdown source files in it, which you can [see for yourself](https://github.com/MyDogsEd/mydogsed.dev/blob/master/blog-content/my-custom-blog-build-system.md) if you really want to. 
 
-In order to render these files to browser-legible HTML, I use a custom [Python script](/scripts/build_blog.py) to read the Markdown files, and insert the content into some template files. These finished files then get inserted into `/blog/`, where you can read them!
+In order to render these files to browser-legible HTML, I use a custom [Python script](https://github.com/MyDogsEd/mydogsed.dev/blob/master/scripts/build_blog.py) to read the Markdown files, and insert the content into some template files. These finished files then get inserted into `/blog/`, where you can read them!
 
 That gives me a few nice benefits:
 
