@@ -266,6 +266,7 @@ main {
 .quote-section,
 .content-section {
     padding-top: 4rem;
+    scroll-margin-top: 7rem;
 }
 
 .quote-card {
@@ -377,6 +378,44 @@ main {
     place-items: center;
     margin-bottom: 1rem;
     font-size: 4rem;
+}
+
+.project-feature {
+    grid-column: 1 / -1;
+    border-color: var(--line);
+    scroll-margin-top: 7rem;
+}
+
+.project-logo {
+    display: block;
+    width: 64px;
+    flex-shrink: 0;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.project-title-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project-title-row h3 {
+    margin: 0;
+}
+
+.project-feature h3 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.project-feature h4 {
+    font-size: 1.15rem;
+}
+
+.project-feature .feature-grid {
+    margin-top: 1.5rem;
 }
 
 .project-art-code {
@@ -594,4 +633,35 @@ main {
     .contact-card {
         padding: 1.2rem;
     }
+}
+
+.experience-feature {
+    border-color: var(--line);
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.experience-feature h3 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.experience-feature h4 {
+    font-size: 1.15rem;
+}
+
+.experience-feature .experience-summary {
+    color: var(--text);
+    font-size: 1.2rem;
+}
+
+.experience-feature .feature-grid {
+    margin-top: 1.5rem;
+}
+
+.experience-feature .project-stack {
+    color: var(--accent-bright);
+    margin: 1rem 0 0;
+}
+
+.past-experience {
+    margin-top: 1.5rem;
 }
